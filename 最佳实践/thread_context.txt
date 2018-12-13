@@ -1,7 +1,0 @@
-嵌套异步调用的Context引用
-
-1、在异步环境里，谨慎引用Context，fragment，activity
-需要手动判断生命周期，遇到组件生命周期终结时继续调用，就会导致出错。
-可以用Livedata来代替，Livedata能感知组件生命周期，自动取消数据观察。
-
-2、在子线程也要谨慎调用Context/activity
