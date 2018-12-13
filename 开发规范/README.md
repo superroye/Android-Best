@@ -8,7 +8,7 @@ Android最佳实践
 # 1 开发工具
 
 安装Android Studio 
-Git 
+Git  
 设备模拟器  
 
 # 2 构建项目
