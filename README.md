@@ -80,8 +80,7 @@ Asynctask
 
 # 推荐的最佳实践
 
-- [处理Android生命周期最佳实践](https://github.com/superroye/Android-Best/blob/master/%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/%E5%A4%84%E7%90%86Android%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5.md)
-- 
+- [Android生命周期最佳实践](https://github.com/superroye/Android-Best/blob/master/%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/Android%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5.md)
 
 
 
