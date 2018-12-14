@@ -39,11 +39,11 @@
 
 
 
-  我们尝试把组件逻辑抽出来，并且实现一个LifecycleCallback给Activity调用，专门负责收集生命周期相关回调。这样的话，似乎组件就解放了，不再依赖Activity了。
+我们尝试把组件逻辑抽出来，并且实现一个LifecycleCallback给Activity调用，专门负责收集生命周期相关回调。这样的话，似乎组件就解放了，不再依赖Activity了。
 
 
 
-  事实上，[Android-arch](https://developer.android.google.cn/topic/libraries/architecture/)架构，已经包含了我们的所需，可以在任何地方实现LifecycleObserver，就可以监控Acvitity生命周期，使用这种方式，代码变得更优雅，扩展也更加轻松。
+  事实上，[Android-arch](https://developer.android.google.cn/topic/libraries/architecture/)  架构，已经包含了我们的所需，可以在任何地方实现LifecycleObserver，就可以监控Acvitity生命周期，使用这种方式，代码变得更优雅，扩展也更加轻松。
 
   ```java
   class MainActivity extends Activity {
