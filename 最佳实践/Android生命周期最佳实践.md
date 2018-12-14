@@ -251,21 +251,23 @@
 
   > Rxjava 执行异步事件，并通知执行结果。
   >
-  > 主要步骤是：
+  >  主要步骤是：
   >
-  > 1、创建事件
+  >  1、创建事件
   >
-  > 有Observable.create, just, from, using, zip等创建操作符
+  >  有Observable.create, just, from, using, zip等创建操作符
   >
-  > 2、事件转换操作（可选）
+  >  2、事件转换操作（可选）
   >
-  > map，flatmap，as，compose等等
+  >  map，flatmap，as，compose等等
   >
-  > 3、设置事件线程池和订阅线程池
+  >  3、设置事件线程池和订阅线程池
   >
-  > 4、订阅事件
+  >  4、订阅事件
   >
-  > subscribe(observer)函数
+  >  subscribe(observer)函数
+  >
+  > 可以说，Rxjava包含了最完整的操作函数，满足了我们所需要的最复杂任务，wiki：https://github.com/ReactiveX/RxJava/wiki
 
   ### 3、在UI线程内拦截
 
