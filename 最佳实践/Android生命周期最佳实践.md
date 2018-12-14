@@ -39,11 +39,11 @@
 
 
 
-我们尝试把组件逻辑抽出来，并且实现一个LifecycleCallback给Activity调用，专门负责收集生命周期相关回调。这样的话，似乎组件就解放了，不再依赖Activity了。
+​       我们尝试把组件逻辑抽出来，并且实现一个LifecycleCallback给Activity调用，专门负责收集生命周期相关回    调。这样的话，似乎组件就解放了，不再依赖Activity了。
 
 
 
-  事实上，[Android-arch](https://developer.android.google.cn/topic/libraries/architecture/)  架构，已经包含了我们的所需，可以在任何地方实现LifecycleObserver，就可以监控Acvitity生命周期，使用这种方式，代码变得更优雅，扩展也更加轻松。
+  事实上，[Android-arch](https://developer.android.google.cn/topic/libraries/architecture/)  架构，已经包含了我们的所需，可以在任何地方实现LifecycleObserver，就可以监控   Acvitity生命周期，使用这种方式，代码变得更优雅，扩展也更加轻松。
 
   ```java
   class MainActivity extends Activity {
@@ -66,9 +66,9 @@
 
 - ## 非激活状态停止调用
 
-  > Activity组件，包含oncreate、onstart、onresume、onpause、onstop、ondestroy状态，特别是异步调用场景，Activity在destroy状态时调用UI操作，就会报token非法不可用。我们要避免这种情况，我们只希望可以有一种统一处理方案。因为无休止的判断，真的很糟糕！
+  > Activity组件，包含oncreate、onstart、onresume、onpause、onstop、ondestroy生命周期事件，特别是异步调用场景，Activity在destroy状态时调用UI操作，就会报token非法不可用。我们要避免这种情况，我们只希望可以有一种统一处理方案。因为无休止的判断，真的很糟糕！
 
-  下面有3种情况，值得注意。
+  下面有5种场景，值得注意。
 
   ### 1、子线程调用UI操作
 
@@ -127,7 +127,7 @@
 
 
 
-    ### 2、执行异步操作，并通知UI线程
+###   2、执行异步操作，并通知UI线程
 
   这是个经典场景，调用本地内存，远程网络，或解析大JSON，都需要在后台线程执行完，再通知UI刷新。
 
@@ -251,23 +251,23 @@
 
   > Rxjava 执行异步事件，并通知执行结果。
   >
-  >  主要步骤是：
+  > 主要步骤是：
   >
-  >  1、创建事件
+  >   1、创建事件
   >
-  >  有Observable.create, just, from, using, zip等创建操作符
+  >   有Observable.create, just, from, using, zip等创建操作符
   >
-  >  2、事件转换操作（可选）
+  >   2、事件转换操作（可选）
   >
-  >  map，flatmap，as，compose等等
+  >   map，flatmap，as，compose等等
   >
-  >  3、设置事件线程池和订阅线程池
+  >   3、设置事件线程池和订阅线程池
   >
-  >  4、订阅事件
+  >   4、订阅事件
   >
-  >  subscribe(observer)函数
+  >   subscribe(observer)函数
   >
-  > 可以说，Rxjava包含了最完整的操作函数，满足了我们所需要的最复杂任务，wiki：https://github.com/ReactiveX/RxJava/wiki
+  >  可以说，Rxjava包含了最完整的操作函数，满足了我们所需要的最复杂任务，wiki：https://github.com/ReactiveX/RxJava/wiki
 
   ### 3、在UI线程内拦截
 
