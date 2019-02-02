@@ -41,7 +41,7 @@
 
 下面介绍最近定义的一套架构，https://github.com/superroye/zzc_mobile_arch
 
-![https://raw.githubusercontent.com/superroye/zzc_mobile_arch/master/doc/%E6%9E%B6%E6%9E%84%E5%9B%BE20190201.png](sss)
+![架构依赖关系图](https://raw.githubusercontent.com/superroye/zzc_mobile_arch/master/doc/%E6%9E%B6%E6%9E%84%E5%9B%BE20190201.png)
 
 图片画的很渣，不影响优秀的你对它的理解。
 
